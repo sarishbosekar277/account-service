@@ -17,12 +17,12 @@ stage('unit testing'){
 	{
 		withSonarQubeEnv('mysonar') 
 		{
-                 sh 'mvn sonar:sonar -Dsonar.organization=sheetalsonarcloud -Dsonar.projectKey=sheetal-account-service'
+                 sh 'mvn sonar:sonar -Dsonar.organization=sheetalsonarcloud -Dsonar.projectKey=account-service'
 
 		
     		}
 	 }
-
+ 
     stage("Quality Gate"){
           timeout(time: 1, unit: 'HOURS') {
               def qg = waitForQualityGate()
