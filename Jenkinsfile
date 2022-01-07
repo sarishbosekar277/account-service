@@ -17,7 +17,7 @@ stage('unit testing'){
 	{
 		withSonarQubeEnv('mysonar') 
 		{
-                 sh 'mvn sonar:sonar -Dsonar.organization=sheetalsonarcloud -Dsonar.projectKey=account-service'
+                 sh 'mvn sonar:sonar -Dsonar.organization=sheetalsonarcloud -Dsonar.projectKey=sheetal-account-service'
 
 		
     		}
