@@ -1,7 +1,7 @@
 node{
     def MAVEN_HOME = tool "sheetalMV"
  env.PATH = "${env.PATH}:${MAVEN_HOME}/bin"
-
+	test('checkout'){}
     stage ('checkout'){
         checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/sarishbosekar277/account-service.git']]])
         } 
