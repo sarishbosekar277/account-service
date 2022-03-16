@@ -8,6 +8,8 @@ node {
   
     stage('initial set up'){
       sh 'mvn clean compile'
+      stage('unit Testing'){
+        sh 'mvn test'
   
   }
 }
