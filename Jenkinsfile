@@ -17,7 +17,7 @@ node {
     
     withSonarQubeEnv('mysonar') 
 	    	{
-                 sh 'mvn sonar:sonar -Dsonar.organization=myorg11222021 -Dsonar.projectKey=account-service'
+                 sh 'mvn sonar:sonar -Dsonar.organization=sheetalsonarcloud -Dsonar.projectKey=account-service'
 		
     		}
   }
